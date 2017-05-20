@@ -20,7 +20,7 @@ npm run build
 
 _Note: There is an example HTML file in the ```build``` directory_
 
-1. Add ```bundle.js``` and ```media``` to your site's root and in your HTML file add this to the head:
+1. Add ```bundle.js``` and ```media``` to your site's root and in your HTML file add this to the top:
 ```html
 <script src="bundle.js"></script>
 ```
