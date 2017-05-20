@@ -12,7 +12,7 @@
 npm install
 ```
 
-1. Build the project by running:
+2. Build the project by running:
 ```bash
 npm run build
 ```
