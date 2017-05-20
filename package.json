@@ -1,0 +1,18 @@
+{
+  "name": "scratchblocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o build/bundle.js && ncp node_modules/scratch-blocks/media build/media"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "ncp": "^2.0.0"
+  },
+  "dependencies": {
+    "scratch-blocks": "0.1.0-prerelease.1494779514"
+  }
+}
