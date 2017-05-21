@@ -36,9 +36,11 @@
 </div>
 <script>
     document.getElementById("inputButton").onclick = function (e) {
-        var warXML = document.getElementById("inputTextArea").value;
+        var rawXML = document.getElementById("inputTextArea").value;
         var output = document.getElementById("output");
-        output.innerHTML = "";
-        window.createScratchBlockSVG(output.children[0]);
+        output.innerHTML = rawXML;
+        if (output.children.length > 0) {
+            window.createScratchBlockSVG(output.children[0]);
+        }
     };
 </script>
