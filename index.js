@@ -21,10 +21,9 @@ window.onload = function() {
     /* Inject your workspace */
     var workspace = ScratchBlocks.inject("ScratchBlocksWorkspace", options);
 
-    var blocks = document.getElementsByClassName("scratchblocks");
-    for (i = 0; i < blocks.length; i++) {
-        if (blocks[i].tagName.toUpperCase() === "XML") {
-            ScratchBlocks.Xml.domToWorkspace(blocks[i], workspace);
+    window.createScratchBlockSVG = function (blockXML) {
+        if (blockXML.tagName.toUpperCase() === "XML") {
+            ScratchBlocks.Xml.domToWorkspace(blockXML, workspace);
             var draggables = document.getElementsByClassName("blocklyBlockCanvas");
             if (draggables.length > 0) {
                 workspace.cleanUp();
@@ -34,10 +33,15 @@ window.onload = function() {
                 svg.setAttribute("width", draggables[0].getBoundingClientRect().width);
                 svg.setAttribute("viewBox", draggables[0].getBBox().x + " " + draggables[0].getBBox().y + " " + draggables[0].getBBox().width + " " + draggables[0].getBBox().height);
                 svg.appendChild(draggables[0].cloneNode(true));
-                blocks[i].parentElement.replaceChild(svg, blocks[i]);
+                blocks[i].parentElement.replaceChild(svg, blockXML);
             }
             workspace.clear();
         }
+    };
+
+    var blocks = document.getElementsByClassName("scratchblocks");
+    for (i = 0; i < blocks.length; i++) {
+        window.createScratchBlockSVG(blocks[i]);
     }
 
 }
