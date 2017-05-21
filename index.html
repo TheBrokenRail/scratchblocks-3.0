@@ -34,3 +34,11 @@
     <button id="inputButton">Export To SVG</button>
     <textarea id="inputTextArea"></textarea>
 </div>
+<script>
+    document.getElementById("inputButton").onclick = function (e) {
+        var warXML = document.getElementById("inputTextArea").value;
+        var output = document.getElementById("output");
+        output.innerHTML = "";
+        window.createScratchBlockSVG(output.children[0]);
+    };
+</script>
