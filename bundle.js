@@ -28,13 +28,13 @@ window.onload = function() {
             var draggables = document.getElementsByClassName("blocklyBlockCanvas");
             if (draggables.length > 0) {
                 workspace.cleanUp();
-                var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+                var svg = document.createElementNS('http://www.w3.org/2000/svg','SVG');
                 svg.setAttribute("class", "scratchblocks");
                 svg.setAttribute("height", draggables[0].getBoundingClientRect().height);
                 svg.setAttribute("width", draggables[0].getBoundingClientRect().width);
                 svg.setAttribute("viewBox", draggables[0].getBBox().x + " " + draggables[0].getBBox().y + " " + draggables[0].getBBox().width + " " + draggables[0].getBBox().height);
                 svg.appendChild(draggables[0].cloneNode(true));
-                blocks[i].parentElement.replaceChild(svg, blockXML);
+                blockXML.parentElement.replaceChild(svg, blockXML);
             }
             workspace.clear();
         }
