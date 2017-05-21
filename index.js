@@ -27,7 +27,7 @@ window.onload = function() {
             var draggables = document.getElementsByClassName("blocklyBlockCanvas");
             if (draggables.length > 0) {
                 workspace.cleanUp();
-                var svg = document.createElementNS('http://www.w3.org/2000/svg','SVG');
+                var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
                 svg.setAttribute("class", "scratchblocks");
                 svg.setAttribute("height", draggables[0].getBoundingClientRect().height);
                 svg.setAttribute("width", draggables[0].getBoundingClientRect().width);
