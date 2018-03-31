@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^14.3.0",
+    "browserify": "^16.1.1",
     "ncp": "^2.0.0"
   },
   "dependencies": {
-    "scratch-blocks": "0.1.0-prerelease.1494779514"
+    "scratch-blocks": "0.1.0-prerelease.1522264400"
   }
 }
