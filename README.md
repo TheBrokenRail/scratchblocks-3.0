@@ -1,5 +1,7 @@
 # scratchblocks-3.0
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/TheBrokenRail/scratchblocks-3.0.svg)](https://greenkeeper.io/)
+
 ## How To Build
 
 ### Dependencies
